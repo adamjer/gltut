@@ -19,15 +19,15 @@ project("glutil")
 	    defines {"LOAD_X11"}
 
 	configuration "Debug"
-		flags "Unicode";
+		characterset ("Unicode");
 		defines {"DEBUG", "_DEBUG", "MEMORY_DEBUGGING"};
 		objdir "Debug";
 		flags "Symbols";
 		targetname "glutilD";
 
 	configuration "Release"
+		characterset ("Unicode");
 		defines {"NDEBUG", "RELEASE"};
-		flags "Unicode";
 		flags {"OptimizeSpeed", "NoFramePointer", "ExtraWarnings", "NoEditAndContinue"};
 		objdir "Release";
 		targetname "glutil"
